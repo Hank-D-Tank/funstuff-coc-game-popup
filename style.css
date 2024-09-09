@@ -1,0 +1,196 @@
+@font-face {
+  font-family: "SuperCell Magic";
+  src: url("Supercell-Magic\ Regular.ttf") format("truetype");
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  outline: none;
+  border: none;
+  font-size: inherit;
+  font-family: "SuperCell Magic";
+}
+
+html{
+  font-size: 50%;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  font-weight: 900;
+  color: #fffffe;
+  background: #e8e8e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+}
+
+.shadow-text{
+  font-size: inherit;
+  text-shadow: -0.1rem -0.1rem 0 #222, 0.1rem -0.1rem 0 #222, -0.1rem 0.1rem 0 #222,
+    0.1rem 0.1rem 0 #222, 0 0.3rem 0 rgba(0, 0, 0, 1);
+    color: #fffffe;
+    pointer-events: none;
+}
+
+.label-btn{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.label-btn .btn{
+  position: relative;
+  width: 20rem;
+  padding: 1rem 0.2rem;
+  margin-top: 0.8rem;
+  border-radius: 1rem;
+  border-top: 0.2rem solid #eeeeeed0;
+  box-shadow: -0.1rem -0.1rem 0 #222, 0.1rem -0.1rem 0 #222, -0.1rem 0.1rem 0 #222,
+  0.1rem 0.1rem 0 #222, 0 0.3rem 0 #222, 0 0.5rem 0 rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.label-btn .btn::after{
+  position: absolute;
+  content: "";
+  width: 95%;
+  height: 2.7rem;
+  top: 10%;
+  left: 50%;
+  border-radius: 0.6rem;
+  transform: translateX(-50%);
+}
+
+.label-btn .btn .shadow-text{
+  position: relative;
+  z-index: 1;
+}
+
+
+.label-btn .btn.green{
+  background: #7EC62D;
+  border: 0.1rem solid #98de4e;
+}
+
+.label-btn .btn.green::after{
+  background: linear-gradient(to top, rgba(255,255,255,0.2), #DCF684);
+}
+
+.label-btn .btn.red{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #E51217;
+  border: 0.1rem solid #eb464b;
+  gap: 5px;
+}
+
+.label-btn .btn.red img{
+  position: relative;
+  height: 2.5rem;
+  object-fit: contain;
+  z-index: 1;
+}
+
+.label-btn .btn.red::after{
+  background: linear-gradient(to top, rgba(255,255,255,0.2), #FF8085);
+}
+
+.backdrop{
+  position: fixed;
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  background: rgba(0, 0, 0, 0.0);
+  z-index: 1000;
+}
+
+
+.modal{
+  margin: auto;
+  padding: 9rem 1rem 1rem 1rem;
+  background: #5A5450;
+  border-radius: 2rem;
+  border-top: 0.2rem solid #eeeeeed0;
+  box-shadow: -0.2rem -0.2rem 0 #222, 0.2rem -0.2rem 0 #222, -0.2rem 0.2rem 0 #222, 0.2rem 0.2rem 0 #222;
+  position: relative;
+}
+
+.modal::after{
+  position: absolute;
+  content: "";
+  width: 98%;
+  height: 3rem;
+  top: 1%;
+  left: 50%;
+  border-radius: 2rem;
+  transform: translateX(-50%);
+  background: linear-gradient(to top, rgba(255,255,255,0.2), #938D8A) ;
+}
+
+.modal h2{
+  position: absolute;
+  top: 2rem;
+  z-index: 10;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2.4rem;
+  text-shadow: -0.2rem -0.2rem 0 #222, 0.2rem -0.2rem 0 #222, -0.2rem 0.2rem 0 #222,
+  0.2rem 0.2rem 0 #222, 0 0.3rem 0 rgba(0, 0, 0, 1);
+}
+
+.close-btn{
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  z-index: 100;
+}
+
+.close-btn .btn{
+  padding: 0.1rem !important;
+  width: 5rem;
+  font-size: 3rem;
+}
+
+.container{
+  width: 88rem;
+  padding: 5rem 0 2rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  border-radius: 2rem;
+  background: #e8e8e0;
+}
+
+.content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.row{
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  gap: 5rem;
+  margin: 1.5rem;
+}
+
+.bar{
+  margin-top: 5rem;
+  margin-bottom: -3rem;
+  width: 95%;
+  height: 0.2rem;
+  border-radius: 1rem;
+  background: #C3C3BC;
+  outline: 0.1rem solid #ffffff;
+}
+

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>COC Modal</title>
+</head>
+
+<body>
+  <div class="backdrop">
+    <div class="modal">
+      <h2 class="shadow-text">Settings</h2>
+      <div class="label-btn close-btn">
+        <button class="btn red">
+          <div class="shadow-text">X</div>
+        </button>
+      </div>
+      <div class="container">
+        <div class="content">
+          <div class="row">
+            <div class="label-btn">
+              <label class="shadow-text">Music</label>
+              <button class="btn green">
+                <div class="shadow-text">On</div>
+              </button>
+            </div>
+
+            <div class="label-btn">
+              <label class="shadow-text">Sound Effects</label>
+              <button class="btn green">
+                <div class="shadow-text">On</div>
+              </button>
+            </div>
+
+            <div class="label-btn">
+              <label class="shadow-text">Language</label>
+              <button class="btn green">
+                <div class="shadow-text">English</div>
+              </button>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="label-btn">
+              <label class="shadow-text">Facebook</label>
+              <button class="btn red"><img src="facebook.png" alt="">
+                <div class="shadow-text">Disconnected</div>
+              </button>
+            </div>
+
+            <div class="label-btn">
+              <label class="shadow-text">Google Play Sign-In</label>
+              <button class="btn red"> <img src="game.png" alt="">
+                <div class="shadow-text">Disconnected</div>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="bar"></div>
+
+        <div class="content">
+
+          <div class="row">
+            <div class="label-btn">
+              <button class="btn green">
+                <div class="shadow-text">Privacy policy</div>
+              </button>
+            </div>
+
+            <div class="label-btn">
+              <button class="btn green">
+                <div class="shadow-text">Terms of service</div>
+              </button>
+            </div>
+
+            <div class="label-btn">
+              <button class="btn green">
+                <div class="shadow-text">Parent's Guide</div>
+              </button>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="label-btn">
+              <button class="btn green">
+                <div class="shadow-text">Help and support</div>
+              </button>
+            </div>
+
+            <div class="label-btn">
+              <button class="btn green">
+                <div class="shadow-text">Credits</div>
+              </button>
+            </div>
+
+            <div class="label-btn">
+              <button class="btn green">
+                <div class="shadow-text">More Settings</div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="label-btn">
+    <label class="shadow-text">Settings</label>
+    <button class="btn green" id="openModalBtn">
+      <div class="shadow-text">Change Settings</div>
+    </button>
+  </div>
+
+  <script>
+    function playAudio() {
+      var audio = new Audio();
+      audio.src = "sound.mp3";
+      audio.play();
+    }
+    var openModalBtn = document.getElementById("openModalBtn");
+    var closeModalBtn = document.querySelector(".close-btn");
+    var backdrop = document.querySelector(".backdrop");
+
+    openModalBtn.addEventListener("click", function () {
+      playAudio();
+      backdrop.style.display = "flex";
+    });
+
+    closeModalBtn.addEventListener("click", function () {
+      playAudio();
+      backdrop.style.display = "none";
+    });
+
+  </script>
+</body>
+
+</html>
